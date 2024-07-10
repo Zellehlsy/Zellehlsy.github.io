@@ -1,0 +1,178 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oishi</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+<script
+			id="sap-ui-bootstrap"
+			src="/resources/sap-ui-core.js"
+			data-sap-ui-theme="sap_bluecrystal"
+			data-sap-ui-modules="sap.m.library"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-preload="async" >
+		</script>
+		<script>
+			sap.ui.getCore().attachInit(function () {
+				new sap.m.Text({
+					text : "SAPUI5 is loaded successfully!"
+				}).placeAt("content");
+			});
+		</script>
+
+
+  </head>
+<body class="sapUiBody" id="content">
+    <nav class="navbar">
+		
+      <div class="navbar-container container">
+          <input type="checkbox" name="" id="">
+          <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+          </div>
+
+
+<img src="oishi-logo.png" id="logo" style=" top: 10px;">
+
+          <ul class="menu-items">
+              <li><a href="#home">HOME</a></li>
+              <li><a href="#about">ABOUT</a></li>
+              <li><a href="#food">PRODUCTS</a></li>
+          </ul>
+		  
+		  
+ 
+      </div>
+  </nav>
+ 
+ 
+    <section class="showcase-area" id="showcase">
+<div class="w3-content w3-section" style="max-width:100vw">
+  <img class="mySlides" src="https://www.oishi.com.ph/wp-content/uploads/2023/09/Desktop-min.png" style="width:100%">
+  <img class="mySlides" src="https://www.oishi.com.ph/wp-content/uploads/2020/12/Always-On-WEBSITE-BANNER-DESKTOP-FA-01-resize.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.oishi.com.ph/wp-content/uploads/2022/07/SOPC-Cover-Photo-Website-Mobile-min.png" style="width:100%">
+</div>
+    </section>
+	
+	
+    <section id="about">
+      <div class="about-wrapper container">
+        <div class="about-text">
+          <p class="small">About Oishi</p>
+          <h2>O,Wow!</h2>
+          <p style = "color: black;">
+            From its humble beginnings of “gawgaw” and coffee 70 years ago, Liwayway Marketing Corporation has taken on bigger and more exciting adventures.
+		In 1974,  Oishi was brought to life and has become the much celebrated snack brand, with iconic products like Oishi Prawn Crackers and Kirei. Today, Oishi’s World of O, Wow! Continues to expand, leaving trails of fun and flavorful 
+		treats across Asia: China, Vietnam, Myanmar, Thailand, Indonesia, Cambodia, and India.
+          </p>
+        </div>
+        <div class="about-img">
+          <img src="https://img2.chinadaily.com.cn/images/202301/06/63b77c67a31057c4b4b2ccd9.jpeg" alt="Oishii" />
+        </div>
+      </div>
+    </section>
+	
+	
+    <section id="food">
+      <h2>products</h2>
+      <div class="food-container container">
+        <div class="food-type fruite"> 
+          <div class="img-container">
+            <img src="https://www.oishi.com.ph/wp-content/uploads/2017/04/oishi-prawn-crackers-100g-copy-200x200.png" alt="chickin" />
+            <div class="img-content">
+              <h3>Chips</h3>
+              <a
+                href="product.html"
+                class="btn btn-primary"
+                target="blank"
+                >MORE</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="food-type vegetable">
+          <div class="img-container">
+            <img src="https://www.oishi.com.ph/wp-content/uploads/2017/02/Smart-C-Lemon-1L-compressed-200x200.png" alt="chikmen" />
+            <div class="img-content">
+              <h3>Beverages</h3>
+              <a
+                href="product.html"
+                class="btn btn-primary"
+                target="blank"
+                >MORE</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="food-type grin">
+          <div class="img-container">
+            <img src="https://www.oishi.com.ph/wp-content/uploads/2017/04/Glazed-Choco-Flakes-90g-C-1-200x200.png" alt="frois" />
+            <div class="img-content">
+              <h3>Cereal</h3>
+              <a
+                href="product.html"
+                class="btn btn-primary"
+                target="blank"
+                >MORE</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="footer">
+      <h2> © Oishi 2024 | All right reserved</h2>
+    </footer>
+  </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+  var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+    $(document).ready(function () {
+      $("a").on("click", function (event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          event.preventDefault();
+
+          var hash = this.hash;
+
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            800,
+            function () {
+
+              window.location.hash = hash;
+            }
+          );
+        }
+      });
+    });
+  </script>
+</html>
+
